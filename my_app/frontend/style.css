@@ -1,0 +1,102 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #eef2f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 400px;
+    max-width: 95%;
+    text-align: center;
+}
+
+.source-btn {
+    background: #555;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+.source-btn:hover { background: #333; }
+
+#cameraBox {
+    position: relative;
+    margin-top: 15px;
+}
+video {
+    width: 100%;
+    border-radius: 10px;
+    background: black;
+}
+.capture-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255,255,255,0.9);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.img-wrapper {
+    max-height: 400px;
+    overflow: hidden;
+    margin: 15px 0;
+    border-radius: 8px;
+}
+#imagePreview {
+    max-width: 100%;
+    display: block;
+}
+
+.action-buttons { display: flex; gap: 10px; justify-content: center; }
+.crop-btn { background: #ff9800; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; }
+.predict-btn { background: #4CAF50; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; flex-grow: 1;}
+
+.confirm-btn { background: #2196F3; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; width: 100%; margin-bottom: 5px;}
+.cancel-btn { background: #f44336; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; width: 100%;}
+
+.result-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: #e8f5e9;
+    border-radius: 8px;
+    border-left: 5px solid #4CAF50;
+}
+
+.model-dropdown {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.model-dropdown:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.buttons-row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}

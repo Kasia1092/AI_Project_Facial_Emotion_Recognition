@@ -1,0 +1,12 @@
+tensorflow
+tf_keras
+numpy<2
+scikit-learn
+matplotlib
+seaborn
+shap
+fastapi
+uvicorn
+python-multipart
+pillow
+jupyter

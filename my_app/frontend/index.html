@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Emotion Detector</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Emotion Detector</h1>
+        
+        <div class="controls">
+            <select id="modelSelect" class="model-dropdown">
+                <option value="my_model">🧠 My model</option>
+            </select>
+
+            <div class="buttons-row">
+                <button onclick="triggerFileInput()" class="source-btn">📂 Upload File</button>
+                <button onclick="startCamera()" class="source-btn">📷 Take picture</button>
+            </div>
+            
+            <input type="file" id="imageInput" accept="image/*" style="display: none;">
+        </div>
+
+        <div id="cameraBox" style="display: none;">
+            <video id="video" autoplay playsinline></video>
+            <button onclick="capturePhoto()" class="capture-btn">Cheese!</button>
+        </div>
+
+        <div id="previewBox" style="display: none;">
+            <div class="img-wrapper">
+                <img id="imagePreview" src="" alt="Preview">
+            </div>
+            
+            <div class="action-buttons" id="actionButtons">
+                <button onclick="enableCropper()" class="crop-btn">Crop Face</button>
+                <button onclick="predictEmotion()" class="predict-btn">▶️​ CHECK EMOTION</button>
+            </div>
+
+            <div class="crop-actions" id="cropActions" style="display: none;">
+                <button onclick="confirmCrop()" class="confirm-btn">Confirm</button>
+                <button onclick="cancelCrop()" class="cancel-btn">Cancel</button>
+            </div>
+        </div>
+
+        <div id="resultBox" class="result-box" style="display: none;">
+            <h2>Result: <span id="emotionLabel">...</span></h2>
+            <p>Confidence: <span id="confidenceLabel">...</span></p>
+        </div>
+
+        <canvas id="canvas" style="display: none;"></canvas>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
