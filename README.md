@@ -27,7 +27,7 @@ Go into the backend folder and start the server:
 
 ```bash
 cd my_app/backend
-uvicorn main:app --reload --port 8080
+uvicorn main:app --reload --port 8001
 ```
 
 ### 3. Open the App
