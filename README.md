@@ -35,7 +35,7 @@ You don't need a server for the frontend. Just go to the frontend folder and dou
 
 ## 🎮 How to Use
 
-- Pick a Model: Select "My Model" (the one I trained) or you can add yours adding them to models folder and adding path to it.
+- Pick a Model: Select "My Model" (the one I trained) or you can add and use your own - save the file in the models folder and update the path in main.py.
 
 - Get a Photo: Click Camera to take a selfie or Upload to choose a file.
 
